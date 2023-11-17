@@ -148,6 +148,8 @@ class MosesPunctNormalizer:
         """
 
         if perl_parity:
+            self.NORMALIZE_UNICODE[9] = ("‘", r'"')
+            self.NORMALIZE_UNICODE[10] = ("‚", r'"')
             self.NORMALIZE_UNICODE[11] = ("’", r'"')
             self.FRENCH_QUOTES[0] = ("\u00A0«\u00A0", r' "')
             self.FRENCH_QUOTES[3] = ("\u00A0»\u00A0", r'" ')
